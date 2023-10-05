@@ -10,10 +10,15 @@ public class Pemilihan2Percobaan127 {
         inputTahun = input27.nextInt();
 
         if (inputTahun % 4 == 0) {
-            if (inputTahun % 100 != 0) 
-                System.out.println("Tahun Kabisat");
-        }else {
-            System.out.println("Bukan Tahun Kabisat");
+            if (inputTahun % 100 == 0) {
+                if (inputTahun % 400 == 0) {
+                    System.out.println("Tahun Kabisat");
+                
+                }else {
+                    System.out.println("Bukan Tahun Kabisat");
+
+            }
+            }
         }
     }
 }
