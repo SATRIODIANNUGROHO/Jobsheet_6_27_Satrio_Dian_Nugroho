@@ -18,15 +18,21 @@ public class Pemilihan2Percobaan227 {
         SudutC = input27.nextInt();
         int TotalSudut;
         TotalSudut = SudutA + SudutB + SudutC;
-
-        if (TotalSudut ==  180) {
-            if ((SudutA == 90) || (SudutB == 90) || (SudutC == 90)) 
+        if (TotalSudut == 180) {
+            if (SudutA == 90 || SudutB == 90 || SudutC == 90) 
                 System.out.println("Segitiga Tersebut Merupakan Segitiga Siku-Siku");
+            else if ((SudutA < SudutB && SudutA < SudutC && SudutB == SudutC) ||
+                     (SudutB < SudutA && SudutB < SudutC && SudutA == SudutC) ||
+                     (SudutC < SudutA && SudutC < SudutB && SudutA == SudutB))
+                System.out.println("Segitiga Tersebut Merupakan Segitiga Sama Kaki");
+            else if (SudutA == SudutB && SudutA == SudutC && SudutB == SudutC)
+                System.out.println("Segitiga Tersebut Merupakan Segitiga Sama Sisi");
             else 
-                System.out.println("Segitiga Tersebut Bukan Segitiga Siku-Siku");
-
-        }else 
+                System.out.println("Segitiga Tersebut Merupakan Segitiga Sembarang");
+        } else {
             System.out.println("Bukan Segitiga");
+        }
+        
     }
 
 }
